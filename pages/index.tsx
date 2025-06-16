@@ -1,4 +1,4 @@
-// ✅ spaXes Splash Fix — Centered Modal with Proper Design
+// ✅ spaXes Splash Fix — Modal Centering and Button Color Corrected
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -51,7 +51,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 flex items-center justify-center font-sans">
+    <div className="h-screen w-full bg-gray-100 text-gray-800 font-sans">
       <Head>
         <title>spaXes</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,7 +59,7 @@ export default function Home() {
       </Head>
 
       {!fid ? (
-        <div className="fixed inset-0 flex items-center justify-center px-4 bg-gray-100">
+        <div className="flex h-full w-full items-center justify-center">
           <div className="bg-white rounded-xl shadow-lg shadow-purple-300 w-full max-w-sm p-6 text-center">
             <img
               src="/IMG_6172.jpeg"
@@ -75,7 +75,7 @@ export default function Home() {
             </h1>
             <button
               onClick={redirectToNeynarLogin}
-              className="w-full py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition"
+              className="w-full py-2 bg-[#8b5cf6] text-white font-semibold rounded-lg hover:bg-[#7c3aed] transition"
             >
               Login with Farcaster
             </button>
