@@ -1,4 +1,4 @@
-// ✅ spaXes Upgrade — Clean Login Modal and Responsive Layout
+// ✅ spaXes Upgrade — Fixed Modal Centering and Button Styling
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -58,25 +58,27 @@ export default function Home() {
       </Head>
 
       {!fid ? (
-        <div className="w-full max-w-sm p-6 bg-white rounded-2xl shadow-lg shadow-purple-200 text-center">
-          <img
-            src="/IMG_6172.jpeg"
-            alt="spaXes logo"
-            className="mx-auto mb-4 rounded-full"
-            style={{ width: '120px', height: '120px', objectFit: 'contain' }}
-          />
-          <h1
-            className="text-2xl italic font-semibold mb-4"
-            style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
-          >
-            spaXes
-          </h1>
-          <button
-            onClick={redirectToNeynarLogin}
-            className="w-full py-2 bg-purple-200 text-purple-900 font-medium rounded"
-          >
-            Login with Farcaster
-          </button>
+        <div className="flex items-center justify-center w-full h-screen px-4">
+          <div className="bg-white rounded-2xl shadow-lg shadow-purple-300 p-6 max-w-sm w-full text-center">
+            <img
+              src="/IMG_6172.jpeg"
+              alt="spaXes logo"
+              className="mx-auto mb-4 rounded-full"
+              style={{ width: '120px', height: '120px', objectFit: 'contain' }}
+            />
+            <h1
+              className="text-2xl italic font-semibold mb-4"
+              style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
+            >
+              spaXes
+            </h1>
+            <button
+              onClick={redirectToNeynarLogin}
+              className="w-full py-2 bg-purple-600 text-white font-medium rounded hover:bg-purple-700 transition"
+            >
+              Login with Farcaster
+            </button>
+          </div>
         </div>
       ) : (
         <main className="w-full max-w-xl mx-auto px-4 pt-8">
