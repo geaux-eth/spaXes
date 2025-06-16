@@ -1,4 +1,4 @@
-// ✅ spaXes Upgrade — Clean Login Splash, Mobile-Friendly
+// ✅ spaXes Upgrade — Compact Login Logo, Clean Popup
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -60,8 +60,8 @@ export default function Home() {
       {/* Conditional Content */}
       {!fid ? (
         <div className="flex flex-col items-center justify-center h-screen p-4">
-          <div className="bg-white rounded-lg shadow-lg shadow-purple-200 p-6 w-full max-w-xs text-center">
-            <img src="/IMG_6172.jpeg" alt="spaXes logo" className="w-16 h-16 mx-auto rounded-full mb-4" />
+          <div className="bg-white rounded-xl shadow-lg shadow-purple-200 p-6 w-full max-w-xs text-center">
+            <img src="/IMG_6172.jpeg" alt="spaXes logo" className="w-[120px] h-[120px] mx-auto rounded-full mb-4 object-contain" />
             <h1
               className="text-xl italic font-semibold mb-4"
               style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
