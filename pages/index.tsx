@@ -56,9 +56,9 @@ export default function Home() {
         <title>spaXes</title>
       </Head>
       <header className="text-center mb-8">
-        <img src="/IMG_6172.jpeg" alt="spaXes logo" className="mx-auto w-24 h-24 mb-4" />
-        <img src="/IMG_6173.jpeg" alt="spaXes banner" className="mx-auto w-full max-w-lg mb-4" />
-        <h1 className="text-4xl font-bold">🎙 spaXes</h1>
+        <img src="/IMG_6172.jpeg" alt="spaXes logo" className="mx-auto w-16 h-16 mb-2 rounded-full object-contain" />
+        <img src="/IMG_6173.jpeg" alt="spaXes banner" className="mx-auto w-full max-w-md h-auto rounded mb-4 object-cover" />
+        <h1 className="text-3xl font-bold">🎙 spaXes</h1>
         <p className="text-sm text-gray-600">Your Farcaster-powered X Spaces dashboard</p>
       </header>
 
