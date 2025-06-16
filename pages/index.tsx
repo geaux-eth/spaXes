@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [fid, setFid] = useState(""); // user input
+  const [fid, setFid] = useState("");
   const [username, setUsername] = useState("");
   const [spaces, setSpaces] = useState([]);
   const [state, setState] = useState("live");
