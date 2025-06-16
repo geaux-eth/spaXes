@@ -1,4 +1,4 @@
-// ✅ spaXes Upgrade — Redesigned Banner, Login Splash, Tailwind UI Polished
+// ✅ spaXes Upgrade — Clean Login Splash, Mobile-Friendly
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -47,7 +47,7 @@ export default function Home() {
   const redirectToNeynarLogin = () => {
     const clientId = "spaxes-app";
     const redirectUri = encodeURIComponent(window.location.origin);
-    window.location.href = `https://api.neynar.com/v2/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=openid+farcaster`; 
+    window.location.href = `https://api.neynar.com/v2/oauth/authorize?client_id=${clientId}&redirect_uri=${redirectUri}&response_type=code&scope=openid+farcaster`;
   };
 
   return (
@@ -57,34 +57,30 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet" />
       </Head>
 
-      {/* Banner Row */}
-      <div className="relative w-full h-20 bg-gray-300 flex items-start">
-        <img src="/IMG_6173.jpeg" alt="spaXes banner" className="h-20 object-cover absolute left-0 top-0" />
-        <div className="ml-[192px] h-20 w-full bg-gray-300" />
-      </div>
-
       {/* Conditional Content */}
       {!fid ? (
-        <div className="flex flex-col items-center justify-center pt-16">
-          <img src="/IMG_6172.jpeg" alt="spaXes logo" className="w-12 h-12 rounded-full mb-2" />
-          <h1
-            className="text-2xl italic font-semibold"
-            style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
-          >
-            spaXes
-          </h1>
-          <button
-            onClick={redirectToNeynarLogin}
-            className="mt-4 px-6 py-2 bg-purple-200 text-purple-900 font-medium rounded shadow"
-          >
-            Login with Farcaster
-          </button>
+        <div className="flex flex-col items-center justify-center h-screen p-4">
+          <div className="bg-white rounded-lg shadow-lg shadow-purple-200 p-6 w-full max-w-xs text-center">
+            <img src="/IMG_6172.jpeg" alt="spaXes logo" className="w-16 h-16 mx-auto rounded-full mb-4" />
+            <h1
+              className="text-xl italic font-semibold mb-4"
+              style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
+            >
+              spaXes
+            </h1>
+            <button
+              onClick={redirectToNeynarLogin}
+              className="w-full py-2 bg-purple-200 text-purple-900 font-medium rounded"
+            >
+              Login with Farcaster
+            </button>
+          </div>
         </div>
       ) : (
         <main className="max-w-xl mx-auto px-6 pt-8">
           <h2 className="text-xl mb-2">Linked Twitter: @{username}</h2>
 
-          <div className="flex gap-4 mb-4">
+          <div className="flex gap-4 mb-4 flex-wrap">
             <button
               onClick={() => setState("live")}
               className={`px-4 py-2 rounded ${state === "live" ? "bg-red-500 text-white" : "bg-white border"}`}
