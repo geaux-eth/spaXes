@@ -1,4 +1,4 @@
-// ✅ spaXes Upgrade — Neynar Auth, Multi-User Support, Branding, Filtering, Tailwind UI
+// ✅ spaXes Upgrade — Redesigned Banner, Login Splash, Tailwind UI Polished
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -51,29 +51,37 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 p-6">
+    <div className="min-h-screen bg-gray-100 text-gray-800">
       <Head>
         <title>spaXes</title>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet" />
       </Head>
-      <header className="text-center mb-8">
-        <img src="/IMG_6172.jpeg" alt="spaXes logo" className="mx-auto w-16 h-16 mb-2 rounded-full object-contain" />
-        <img src="/IMG_6173.jpeg" alt="spaXes banner" className="mx-auto w-full max-w-md h-auto rounded mb-4 object-cover" />
-        <h1 className="text-3xl font-bold">🎙 spaXes</h1>
-        <p className="text-sm text-gray-600">Your Farcaster-powered X Spaces dashboard</p>
-      </header>
 
+      {/* Banner Row */}
+      <div className="relative w-full h-20 bg-gray-300 flex items-start">
+        <img src="/IMG_6173.jpeg" alt="spaXes banner" className="h-20 object-cover absolute left-0 top-0" />
+        <div className="ml-[192px] h-20 w-full bg-gray-300" />
+      </div>
+
+      {/* Conditional Content */}
       {!fid ? (
-        <div className="text-center space-y-4">
-          <p className="text-lg">Connect with your Farcaster account</p>
+        <div className="flex flex-col items-center justify-center pt-16">
+          <img src="/IMG_6172.jpeg" alt="spaXes logo" className="w-12 h-12 rounded-full mb-2" />
+          <h1
+            className="text-2xl italic font-semibold"
+            style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
+          >
+            spaXes
+          </h1>
           <button
             onClick={redirectToNeynarLogin}
-            className="px-6 py-2 bg-purple-600 text-white rounded shadow"
+            className="mt-4 px-6 py-2 bg-purple-200 text-purple-900 font-medium rounded shadow"
           >
-            Sign in with Farcaster
+            Login with Farcaster
           </button>
         </div>
       ) : (
-        <main className="max-w-xl mx-auto">
+        <main className="max-w-xl mx-auto px-6 pt-8">
           <h2 className="text-xl mb-2">Linked Twitter: @{username}</h2>
 
           <div className="flex gap-4 mb-4">
