@@ -1,3 +1,5 @@
+// ✅ spaXes Splash Fix — Centered Modal with Proper Design
+
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
@@ -53,19 +55,16 @@ export default function Home() {
       <Head>
         <title>spaXes</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet" />
       </Head>
 
       {!fid ? (
-        <div className="fixed inset-0 flex items-center justify-center px-4">
-          <div className="bg-white rounded-2xl shadow-lg shadow-purple-300 p-8 w-full max-w-xs text-center">
+        <div className="fixed inset-0 flex items-center justify-center px-4 bg-gray-100">
+          <div className="bg-white rounded-xl shadow-lg shadow-purple-300 w-full max-w-sm p-6 text-center">
             <img
               src="/IMG_6172.jpeg"
               alt="spaXes logo"
-              className="mx-auto mb-4 rounded-full"
+              className="mx-auto mb-4"
               style={{ width: "120px", height: "120px", objectFit: "contain" }}
             />
             <h1
@@ -76,7 +75,7 @@ export default function Home() {
             </h1>
             <button
               onClick={redirectToNeynarLogin}
-              className="w-full py-2 bg-[#8b5cf6] text-white font-semibold rounded-lg hover:bg-[#7c3aed] transition"
+              className="w-full py-2 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition"
             >
               Login with Farcaster
             </button>
@@ -89,24 +88,12 @@ export default function Home() {
           <div className="flex gap-4 mb-4 flex-wrap">
             <button
               onClick={() => setState("live")}
-              className={`px-4 py-2 rounded ${
-                state === "live"
-                  ? "bg-red-500 text-white"
-                  : "bg-white border"
-              }`}
-            >
-              🔴 Live
-            </button>
+              className={`px-4 py-2 rounded ${state === "live" ? "bg-red-500 text-white" : "bg-white border"}`}
+            >🔴 Live</button>
             <button
               onClick={() => setState("scheduled")}
-              className={`px-4 py-2 rounded ${
-                state === "scheduled"
-                  ? "bg-blue-500 text-white"
-                  : "bg-white border"
-              }`}
-            >
-              📅 Scheduled
-            </button>
+              className={`px-4 py-2 rounded ${state === "scheduled" ? "bg-blue-500 text-white" : "bg-white border"}`}
+            >📅 Scheduled</button>
           </div>
 
           <input
@@ -130,9 +117,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-2 px-3 py-1 bg-black text-white text-sm rounded"
-                  >
-                    Join Space
-                  </a>
+                  >Join Space</a>
                 </li>
               ))
             )}
