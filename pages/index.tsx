@@ -1,4 +1,4 @@
-// ✅ spaXes Splash Fix — Final Modal + Button Styling Fix
+// ✅ spaXes Splash Fix — Final Centered Modal and Font Consistency
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -51,15 +51,17 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-100 text-gray-800 flex items-center justify-center font-sans">
       <Head>
         <title>spaXes</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet" />
       </Head>
 
       {!fid ? (
-        <div className="flex items-center justify-center min-h-screen w-full px-4 py-12">
-          <div className="bg-white rounded-2xl shadow-lg shadow-purple-300 p-8 max-w-xs w-full text-center">
+        <div className="fixed inset-0 flex items-center justify-center px-4">
+          <div className="bg-white rounded-2xl shadow-lg shadow-purple-300 p-8 w-full max-w-xs text-center">
             <img
               src="/IMG_6172.jpeg"
               alt="spaXes logo"
