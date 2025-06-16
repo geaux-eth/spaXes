@@ -1,5 +1,3 @@
-// ✅ spaXes Splash Fix — Final Centered Modal and Font Consistency
-
 import { useEffect, useState } from "react";
 import Head from "next/head";
 
@@ -55,7 +53,10 @@ export default function Home() {
       <Head>
         <title>spaXes</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-                <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       {!fid ? (
@@ -65,11 +66,11 @@ export default function Home() {
               src="/IMG_6172.jpeg"
               alt="spaXes logo"
               className="mx-auto mb-4 rounded-full"
-              style={{ width: '120px', height: '120px', objectFit: 'contain' }}
+              style={{ width: "120px", height: "120px", objectFit: "contain" }}
             />
             <h1
               className="text-2xl italic font-semibold mb-4"
-              style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
+              style={{ fontFamily: "IBM Plex Sans, sans-serif" }}
             >
               spaXes
             </h1>
@@ -88,12 +89,24 @@ export default function Home() {
           <div className="flex gap-4 mb-4 flex-wrap">
             <button
               onClick={() => setState("live")}
-              className={`px-4 py-2 rounded ${state === "live" ? "bg-red-500 text-white" : "bg-white border"}`}
-            >🔴 Live</button>
+              className={`px-4 py-2 rounded ${
+                state === "live"
+                  ? "bg-red-500 text-white"
+                  : "bg-white border"
+              }`}
+            >
+              🔴 Live
+            </button>
             <button
               onClick={() => setState("scheduled")}
-              className={`px-4 py-2 rounded ${state === "scheduled" ? "bg-blue-500 text-white" : "bg-white border"}`}
-            >📅 Scheduled</button>
+              className={`px-4 py-2 rounded ${
+                state === "scheduled"
+                  ? "bg-blue-500 text-white"
+                  : "bg-white border"
+              }`}
+            >
+              📅 Scheduled
+            </button>
           </div>
 
           <input
@@ -117,7 +130,9 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-block mt-2 px-3 py-1 bg-black text-white text-sm rounded"
-                  >Join Space</a>
+                  >
+                    Join Space
+                  </a>
                 </li>
               ))
             )}
