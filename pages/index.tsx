@@ -1,4 +1,4 @@
-// ✅ spaXes Upgrade — Compact Login Logo, Clean Popup
+// ✅ spaXes Upgrade — Clean Login Modal and Responsive Layout
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -51,33 +51,35 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 text-gray-800">
+    <div className="min-h-screen bg-gray-100 text-gray-800 flex items-center justify-center">
       <Head>
         <title>spaXes</title>
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@1,600&display=swap" rel="stylesheet" />
       </Head>
 
-      {/* Conditional Content */}
       {!fid ? (
-        <div className="flex flex-col items-center justify-center h-screen p-4">
-          <div className="bg-white rounded-xl shadow-lg shadow-purple-200 p-6 w-full max-w-xs text-center">
-            <img src="/IMG_6172.jpeg" alt="spaXes logo" className="w-[120px] h-[120px] mx-auto rounded-full mb-4 object-contain" />
-            <h1
-              className="text-xl italic font-semibold mb-4"
-              style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
-            >
-              spaXes
-            </h1>
-            <button
-              onClick={redirectToNeynarLogin}
-              className="w-full py-2 bg-purple-200 text-purple-900 font-medium rounded"
-            >
-              Login with Farcaster
-            </button>
-          </div>
+        <div className="w-full max-w-sm p-6 bg-white rounded-2xl shadow-lg shadow-purple-200 text-center">
+          <img
+            src="/IMG_6172.jpeg"
+            alt="spaXes logo"
+            className="mx-auto mb-4 rounded-full"
+            style={{ width: '120px', height: '120px', objectFit: 'contain' }}
+          />
+          <h1
+            className="text-2xl italic font-semibold mb-4"
+            style={{ fontFamily: 'IBM Plex Sans, sans-serif' }}
+          >
+            spaXes
+          </h1>
+          <button
+            onClick={redirectToNeynarLogin}
+            className="w-full py-2 bg-purple-200 text-purple-900 font-medium rounded"
+          >
+            Login with Farcaster
+          </button>
         </div>
       ) : (
-        <main className="max-w-xl mx-auto px-6 pt-8">
+        <main className="w-full max-w-xl mx-auto px-4 pt-8">
           <h2 className="text-xl mb-2">Linked Twitter: @{username}</h2>
 
           <div className="flex gap-4 mb-4 flex-wrap">
