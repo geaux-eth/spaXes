@@ -1,4 +1,4 @@
-// ✅ spaXes Upgrade — Fixed Modal Centering and Button Styling
+// ✅ spaXes Splash Fix — Modal Layout, Font Correction, Mobile Friendly
 
 import { useEffect, useState } from "react";
 import Head from "next/head";
@@ -58,8 +58,8 @@ export default function Home() {
       </Head>
 
       {!fid ? (
-        <div className="flex items-center justify-center w-full h-screen px-4">
-          <div className="bg-white rounded-2xl shadow-lg shadow-purple-300 p-6 max-w-sm w-full text-center">
+        <div className="flex items-center justify-center w-full h-full px-4 py-12">
+          <div className="bg-white rounded-2xl shadow-xl shadow-purple-300 p-8 max-w-xs w-full text-center">
             <img
               src="/IMG_6172.jpeg"
               alt="spaXes logo"
@@ -74,7 +74,7 @@ export default function Home() {
             </h1>
             <button
               onClick={redirectToNeynarLogin}
-              className="w-full py-2 bg-purple-600 text-white font-medium rounded hover:bg-purple-700 transition"
+              className="w-full py-2 bg-purple-700 text-white font-semibold rounded-lg hover:bg-purple-800 transition"
             >
               Login with Farcaster
             </button>
