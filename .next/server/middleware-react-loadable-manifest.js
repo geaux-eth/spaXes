@@ -1,1 +1,0 @@
-self.__REACT_LOADABLE_MANIFEST="{\"pages/index.js -> ../components/FarcasterLogin\":{\"id\":\"pages/index.js -> ../components/FarcasterLogin\",\"files\":[\"static/chunks/components_FarcasterLogin_js.js\"]}}"
