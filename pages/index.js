@@ -15,7 +15,4 @@ export default function Home() {
     </div>
   );
 }
-// trigger redeploy
 //force redeploy
-force redeploy
-// force redeploy
